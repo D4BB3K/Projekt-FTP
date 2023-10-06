@@ -10,12 +10,11 @@ body {
   align-items: center;
   margin-left: 0.625rem;
   margin-right: 0.625rem;
-  width: 100%;
 }
 
-#path {
-  margin-left: 0.625rem;
-  margin-right: 0.625rem;
+.header h3 {
+  margin-right: 10rem;
+  margin-left: auto;
 }
 
 #search {
