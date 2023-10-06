@@ -16,7 +16,9 @@ body {
   margin-right: 10rem;
   margin-left: auto;
 }
-
+.header a{
+  margin-right: 0.625rem;
+}
 #search {
   display: block;
   padding: 0.5rem 0.75rem;
