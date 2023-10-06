@@ -17,8 +17,7 @@
 
     <div class="header">
 
-        <input type="search" id="wyszukiwarka" name="wysz" placeholder="Szukaj">
-        <button>Wyszukaj</button>
+        <input type="text" id="search" onkeyup="wyszukiwanieF()" placeholder="Search for names.." title="Type in a name"> <!-- wyszukiwarka -->
     </div>
     <!-------------------------------------------->
     <div class="pasek">
@@ -29,7 +28,7 @@
     <!-------------------------------------------->
     <div class="main">    
 
-            <table class="pliki">
+            <table class="pliki" id="t_pliki">
                 
                 <tr>
                     <td class="tytul"> Nazwa </td>
@@ -38,14 +37,34 @@
                 </tr>
                 
                 <tr>
-                    <td class="parz">  </td>
-                    <td class="nie-parz"></td>
-                    <td class="parz"> </td>
+                    <td class="nie-parz">  </td>
+                    <td class="parz"></td>
+                    <td class="nie-parz"> </td>
                 </tr>
             </table>   
 
     </div>
 
+    <script>
+        function wyszukiwanieF() {
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("search");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("t_pliki");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }       
+          }
+        }
+        </script>
 </body>
 
 </html>
