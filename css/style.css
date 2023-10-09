@@ -37,3 +37,11 @@ body {
   border-color: #3498db;
   outline: 0;
 }
+
+#home {
+  width: 44px;
+  height: 44px;
+}
+#home:hover {
+  transform: scale(1.1);
+}
