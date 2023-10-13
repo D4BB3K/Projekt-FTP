@@ -28,8 +28,7 @@ body {
   width: 100%;
 }
 .wyb_teamu td {
-  transition: box-shadow .3s;
-  transition: transform .3s;
+  transition: box-shadow 0.3s, transform 0.3s;
   width: 100%;
   height: 200px;
   margin-top: 30px;
@@ -42,6 +41,7 @@ body {
   line-height: 200px;  
   font-weight: bold;
   font-size: 2.925rem;
+  cursor: pointer;
 }
 .wyb_teamu td:hover {
   box-shadow: 0 0 20px #3498db;
@@ -53,20 +53,20 @@ body {
   width: 100%;
 }
 .wyb_postaci td {
-  transition: box-shadow .3s;
-  transition: transform .3s;
+  transition: box-shadow 0.3s, transform 0.3s;
   width: 300px;
   height: 500px;
   margin: 45px;
-  border-radius:10px;
+  float: left;
+  border-radius: 10px;
   border: 3px solid #4d4d4d;
   background: #fff;
-  float: left;
   text-align: center;
   vertical-align: middle;
-  line-height: 500px;  
+  line-height: 500px;
   font-weight: bold;
   font-size: 2.925rem;
+  cursor: pointer;
 }
 .wyb_postaci td:hover {
   box-shadow: 0 0 20px #3498db;
