@@ -104,3 +104,11 @@ body {
   content: url("../img/home2.svg");
   transform: scale(1.1);
 }
+#info {
+  width: 44px;
+  height: 44px;
+}
+#info:hover {
+  content: url("../img/info2.svg");
+  transform: scale(1.1);
+}
