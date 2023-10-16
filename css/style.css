@@ -26,6 +26,7 @@ body {
 
 .wyb_teamu {
   width: 100%;
+  margin: auto;
 }
 .wyb_teamu td {
   transition: box-shadow 0.3s, transform 0.3s;
@@ -50,7 +51,10 @@ body {
 }
 
 .wyb_postaci {
+  display: flex;
+  justify-content: center;
   width: 100%;
+  margin: auto;
 }
 .wyb_postaci tr {
   transition: box-shadow 0.3s, transform 0.3s;
