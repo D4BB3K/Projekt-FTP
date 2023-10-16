@@ -2,36 +2,43 @@
 <html lang="pl-PL">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index of /~ng/klasy_3</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index of /~ng/klasy_3</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <script src="../script/main.js"></script>
 </head>
 
 <body>
 
-    <div class="header">
-        <a href="../index.html" title="Przejdź do strony głównej"><img src="../img/home.svg" alt="Home" id="home"></a>
-        <h1>Klasy 3</h1>
-        <input type="text" id="search" onkeyup="wyszukiwanieF()" placeholder="Search for names.."
-            title="Type in a name"> <!-- wyszukiwarka -->
-        <h2>~ng/klasy</h2>
-    </div>
+  <div class="header">
+    <a href="../index.html" title="Przejdź do strony głównej"><img src="../img/home.svg" alt="Home" id="home"></a>
+    <h1>Klasy 3</h1>
 
-    <div class="pasek">
-        <a target="_blank" href="https://zse.edu.gdansk.pl/Content/pub/458/Plan_lekcji/plan2018/plany/n62.html"><img
-                src="plan_button.png" alt="Plan"></a>
-    </div>
+    <input type="text" id="search" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+    <!-- wyszukiwarka -->
 
-    <div class="main">
-        <table class="wyb_postaci">
-            <tr>
-                <td onclick="window.location='rodzaj/3G.html';">3G</td>
-                <td onclick="window.location='rodzaj/3G.html';">3K</td>
-                <td onclick="window.location='rodzaj/3G.html';">3P</td>
-            </tr>
-        </table>
-    </div>
+    <h2>/~ng/klasy_3</h2>
+  </div>
+
+  <div class="pasek">
+    <a target="_blank" href="https://zse.edu.gdansk.pl/Content/pub/458/Plan_lekcji/plan2018/plany/n62.html"><img
+        src="plan_button.png" alt="Plan"></a>
+  </div>
+
+  <div class="main">
+    <table class="wyb_postaci" id="myTable">
+      <tr>
+        <td onclick="window.location='rodzaj/3G.html';">3G</td>
+      </tr>
+      <tr>
+        <td onclick="window.location='rodzaj/3K.html';">3K</td>
+      </tr>
+      <tr>
+        <td onclick="window.location='rodzaj/3P.html';">3P</td>
+      </tr>
+    </table>
+  </div>
 
 </body>
 
