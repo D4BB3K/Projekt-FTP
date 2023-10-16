@@ -17,7 +17,7 @@
 
     <div class="header">
 
-      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name"> <!-- wyszukiwarka -->
+      <input type="text" id="search" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name"> <!-- wyszukiwarka -->
     </div>
     <!-------------------------------------------->
     <div class="pasek">
@@ -71,7 +71,7 @@
     <script>
       function myFunction() {
         var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("myInput");
+        input = document.getElementById("search");
         filter = input.value.toUpperCase();
         table = document.getElementById("myTable");
         tr = table.getElementsByTagName("tr");
