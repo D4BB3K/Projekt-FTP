@@ -94,6 +94,7 @@ body {
 #search:focus {
   border-color: #3498db;
   outline: 0;
+  box-shadow: 0 0 10px #3498db;
 }
 
 #home {
