@@ -6,19 +6,19 @@ body {
 }
 
 
-.header {
+#header {
   display: flex;
   align-items: center;
   margin-left: 0.625rem;
   margin-right: 0.625rem;
 }
 
-.header h2 {
+#header h2 {
   margin-right: 10rem;
   margin-left: auto;
 }
 
-.header a {
+#header a {
   margin-right: 0.625rem;
 }
 
@@ -204,7 +204,7 @@ body {
     font-size: 1.5em;
   }
 
-  #page-header {
+  #header {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;

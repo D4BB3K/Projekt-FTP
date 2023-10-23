@@ -80,7 +80,7 @@ function myFunction() {
       titleText = `Index of ${titleText}`;
   
       const container = document.createElement('div');
-      container.id = 'page-header';
+      container.id = 'header';
       const h1 = document.createElement('h1');
       h1.appendChild(document.createTextNode(titleText));
       container.appendChild(h1);
@@ -155,7 +155,7 @@ function myFunction() {
       input.type = 'search';
       input.id = 'search';
       input.setAttribute('placeholder', 'Search');
-      document.getElementById('page-header').appendChild(input);
+      document.getElementById('header').appendChild(input);
   
       const sortColumns = Array.from(document.querySelectorAll('thead a'));
       const nameColumns = Array.from(document.querySelectorAll('tbody .indexcolname'));
