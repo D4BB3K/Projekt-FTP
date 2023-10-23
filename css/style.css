@@ -146,9 +146,38 @@ body {
   object-fit: contain;
 }
 
-.img-wrap + a {
+.img-wrap+a {
   display: inline-block;
   vertical-align: middle;
+}
+
+#indexlist {
+  width: 100%;
+  background: white;
+  border: 0;
+  table-layout: auto;
+}
+
+#indexlist thead {
+  background: #efefef;
+}
+
+#indexlist tr th,
+#indexlist tr td {
+  padding: 0.5625rem 0.625rem;
+  font-size: 0.875rem;
+  color: #222222;
+  text-align: left;
+  line-height: 1.125rem;
+}
+
+#indexlist thead tr th {
+  padding: 0.5rem 0.625rem 0.625rem;
+  font-weight: bold;
+}
+
+#indexlist tr.even {
+  background: whitesmoke;
 }
 
 
@@ -194,9 +223,16 @@ body {
   transform: scale(1.1);
 }
 
+.hidden {
+  display: none;
+}
+
 /* Hide extra columns so they don't squash file names */
 @media (max-width: 600px) {
-  .indexcollastmod, .indexcoldesc, .indexcolsize {
+
+  .indexcollastmod,
+  .indexcoldesc,
+  .indexcolsize {
     display: none;
   }
 
