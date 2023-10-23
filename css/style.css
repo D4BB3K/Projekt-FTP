@@ -193,3 +193,31 @@ body {
   content: url("../img/info2.svg");
   transform: scale(1.1);
 }
+
+/* Hide extra columns so they don't squash file names */
+@media (max-width: 600px) {
+  .indexcollastmod, .indexcoldesc, .indexcolsize {
+    display: none;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  #page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 1em
+  }
+
+  #search {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.375em;
+  }
+}
