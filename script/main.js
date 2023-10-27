@@ -18,6 +18,9 @@ function myFunction() {
     }
 }
 
+
+//Tworzenie tabeli
+
 {
     function fixTable() {
       const table = document.querySelector('table');
