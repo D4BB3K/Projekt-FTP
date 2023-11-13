@@ -69,44 +69,44 @@ function myFunction() {
   }
 
   function addTitle() {
-    
+
     const container = document.createElement('div');
     container.id = 'header';
     const a1 = document.createElement('a');
-      a1.href = '../klasa5.html';
-      a1.title = 'Przejdź do strony głównej';
+    a1.href = '../klasa5.html';
+    a1.title = 'Przejdź do strony głównej';
 
-      const img1 = document.createElement('img');
-      img1.src = '../../img/home.svg';
-      img1.alt = 'Home';
-      img1.id = 'home';
+    const img1 = document.createElement('img');
+    img1.src = '../../img/home.svg';
+    img1.alt = 'Home';
+    img1.id = 'home';
 
-      a1.appendChild(img1);
-      container.appendChild(a1);
+    a1.appendChild(img1);
+    container.appendChild(a1);
 
-      const a2 = document.createElement('a');
-      a2.href = 'https://zse.edu.gdansk.pl/Content/pub/458/Plan_lekcji/plan2018/plany/n62.html';
-      a2.title = 'Przejdź do planu lekcji nauczyciela';
-      a2.target = '_blank';
+    const a2 = document.createElement('a');
+    a2.href = 'https://zse.edu.gdansk.pl/Content/pub/458/Plan_lekcji/plan2018/plany/n62.html';
+    a2.title = 'Przejdź do planu lekcji nauczyciela';
+    a2.target = '_blank';
 
-      const img2 = document.createElement('img');
-      img2.src = '../../img/info.svg';
-      img2.alt = 'Info';
-      img2.id = 'info';
+    const img2 = document.createElement('img');
+    img2.src = '../../img/info.svg';
+    img2.alt = 'Info';
+    img2.id = 'info';
 
-      a2.appendChild(img2);
-      container.appendChild(a2);
+    a2.appendChild(img2);
+    container.appendChild(a2);
 
-      const h1 = document.createElement('h1');
-      h1.textContent = '5G';
+    const h1 = document.createElement('h1');
+    h1.textContent = '5G';
 
-      container.appendChild(h1);
+    container.appendChild(h1);
 
-      const h2 = document.createElement('h2');
-      h2.textContent = '/~ng/klasy_5/5G';
-      container.appendChild(h2);
+    const h2 = document.createElement('h2');
+    h2.textContent = '/~ng/klasy_5/5G';
+    container.appendChild(h2);
 
-      document.body.insertBefore(container, document.body.firstChild);
+    document.body.insertBefore(container, document.body.firstChild);
   }
 
   function getTimeSince(seconds) {
@@ -174,8 +174,11 @@ function myFunction() {
     const input = document.createElement('input');
     input.type = 'search';
     input.id = 'search';
-    input.setAttribute('placeholder', 'Search');
-    document.getElementById('header').appendChild(input);
+    input.setAttribute('placeholder', 'Search for names..');
+    
+    const header = document.getElementById('header');
+    const h1 = header.getElementsByTagName('h1')[0];
+    header.insertBefore(input, h1.nextElementSibling);
 
     const sortColumns = Array.from(document.querySelectorAll('thead a'));
     const nameColumns = Array.from(document.querySelectorAll('tbody .indexcolname'));
