@@ -175,7 +175,7 @@ function myFunction() {
     input.type = 'search';
     input.id = 'search';
     input.setAttribute('placeholder', 'Search for names..');
-    
+
     const header = document.getElementById('header');
     const h1 = header.getElementsByTagName('h1')[0];
     header.insertBefore(input, h1.nextElementSibling);
