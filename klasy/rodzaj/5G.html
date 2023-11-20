@@ -32,7 +32,7 @@
         <hr />
       </th>
     </tr>
-    <tr class="even">
+    <!--<tr class="even">
       <td class="indexcolicon">
         <img src="../../img/file-directory.svg" alt="[DIR]" width="16" height="16"/>
       </td>
@@ -45,9 +45,66 @@
       <th colspan="5">
         <hr/>
       </th>
-    </tr>
+    </tr>-->
   </table>
-  <script src="../../script/main.js"></script>
+  <script>
+    window.onload = function () {
+        // Pobierz element tabeli
+        const table = document.getElementById('indexlist');
+    
+        // Pobierz dane z serwera
+        fetch('../../pliki/')
+            .then(response => response.json())
+            .then(files => {
+                // Generuj wiersze dla każdego pliku
+                files.forEach(file => {
+                    const row = document.createElement('tr');
+                    row.className = file.isDirectory ? 'even' : 'odd';
+    
+                    // Ikona
+                    const iconCell = document.createElement('td');
+                    iconCell.className = 'indexcolicon';
+                    iconCell.innerHTML = `<img src="../../img/${file.isDirectory ? 'file-directory' : 'file'}.svg" alt="[DIR]" width="16" height="16"/>`;
+                    row.appendChild(iconCell);
+    
+                    // Nazwa pliku
+                    const nameCell = document.createElement('td');
+                    nameCell.className = 'indexcolname';
+                    const link = document.createElement('a');
+                    link.href = file.isDirectory ? `${file.name}/` : '#'; // Dla plików nie dodawaj linku
+                    link.textContent = file.name + (file.isDirectory ? '/' : '');
+                    nameCell.appendChild(link);
+                    row.appendChild(nameCell);
+    
+                    // Ostatnia modyfikacja
+                    const lastModCell = document.createElement('td');
+                    lastModCell.className = 'indexcollastmod';
+                    lastModCell.textContent = file.lastModified;
+                    row.appendChild(lastModCell);
+    
+                    // Rozmiar
+                    const sizeCell = document.createElement('td');
+                    sizeCell.className = 'indexcolsize';
+                    sizeCell.textContent = file.isDirectory ? '-' : file.size;
+                    row.appendChild(sizeCell);
+    
+                    // Opis
+                    const descCell = document.createElement('td');
+                    descCell.className = 'indexcoldesc';
+                    descCell.innerHTML = '&nbsp;';
+                    row.appendChild(descCell);
+    
+                    // Dodaj wiersz do tabeli
+                    table.appendChild(row);
+                });
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    };
+    </script>
+    
+  <!--<script src="../../script/main.js"></script>-->
 </body>
 
 </html>
