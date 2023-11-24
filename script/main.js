@@ -117,6 +117,21 @@ function myFunction() {
     document.body.insertBefore(container, document.body.firstChild);
   }
 
+  function addtbody() {
+
+    const t1 = document.createElement('tr');
+    t1.className = 'even';
+    const td1 = document.createElement('td');
+    td1.className = 'indexcolicon';
+    
+    
+    t1.appendChild(td1);
+
+    const table = document.getElementById('indexlist');
+    const tbody = table.getElementsByTagName('tbody')[0];
+    table.insertBefore(t1, tbody.nextElementSibling);
+  }
+
   function getTimeSince(seconds) {
     let intervalType;
 
@@ -226,7 +241,10 @@ function myFunction() {
 
   fixTable();
   addTitle();
-  //fixTime();
   addSearch();
+  addtbody();
+  //fixTime();
+  
+  
 }
 
